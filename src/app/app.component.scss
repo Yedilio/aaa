@@ -1,7 +1,71 @@
-:host {
+:host ::ng-deep {
+  .mat-badge-content {
+    right: -9px !important;
+    top: -10px !important;
+    border-radius: 0;
+    background: red;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.d-flex {
+  background: #4876c3;
+  position: relative;
+  height: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  justify-content: space-between;
+
+  .logo {
+    position: absolute;
+    top: -66px;
+  }
+
+  .menu {
+    margin-left: 200px;
+    padding: 0 20px;
+    display: flex;
+    flex: 1;
+
+    ul {
+      display: flex;
+      flex: 1;
+      list-style: none;
+      align-items: center;
+      margin: 10px 0;
+
+      .icon {
+        margin-left: 10px;
+      }
+
+      .drop_down {
+        margin-left: 5px;
+      }
+
+      li {
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: white;
+          transition: 0.5s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    flex: 0 0 120px;
+    justify-content: space-evenly;
+
+    .profile {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+  }
 }

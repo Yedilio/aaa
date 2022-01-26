@@ -1,0 +1,24 @@
+<mat-icon class="search">search</mat-icon>
+<input type="text" [(ngModel)]="str" />
+<div class="search-block" *ngIf="isSearch" @enterAnim>
+  <div class="d-flex">
+    <mat-checkbox>мои</mat-checkbox>
+    <input type="text" class="author" placeholder="Автор" />
+  </div>
+  <div class="d-flex">
+    Сортировать по:
+    <mat-form-field>
+      <mat-select [(ngModel)]="option">
+        <mat-option [value]="0">дате</mat-option>
+        <mat-option [value]="1">время</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="d-flex">
+    <mat-checkbox>я участник</mat-checkbox>
+    <mat-checkbox>в загаловке</mat-checkbox>
+    <mat-checkbox>строгий поиск</mat-checkbox>
+  </div>
+</div>
+<mat-icon class="close" (click)="str = ''">close</mat-icon>
+<div class="search-text" (click)="setSearch()">Найти</div>
